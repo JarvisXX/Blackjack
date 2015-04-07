@@ -9,7 +9,7 @@ int player_stage();
 int PC_stage();
 
 string color[4] = {"Heart","Diamond","Spade","Club"};
-string num[13] = {"Ace","2","3","4","5","6","7","8","9","10","Jcak","Queen","King"};
+string num[13] = {"Ace","2","3","4","5","6","7","8","9","10","Jack","Queen","King"};
 string cards_1[21], cards_2[21];
 int mark_cards[4][13] = {0};
 int WorL, cards_num_1, cards_num_2;
@@ -51,7 +51,7 @@ string rand_card()
 	{	srand(time(NULL));
 		a[0] = rand() % 4;
 		a[1] = rand() % 13;
-	} while (mark_cards[a[0]][a[1]] == 1);
+	} while (mark_cards[a[0]][a[1]]);
 	switch (a[1])
 	{	case 10:
 		case 11:
